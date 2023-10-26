@@ -12,6 +12,13 @@ function promptUser(){
             type: 'input',
             message: 'Input 3 letters to represent your logo',
             name: 'logo'
+            validate: function(input) {
+            if (input.length <= 3) {
+                return true;
+            } else {
+                return 'Input field allows up to 3 characters';
+            }
+            }
         },
 
         {
@@ -41,6 +48,9 @@ function promptUser(){
 }
 
 // writeToFile function
+
+
+
   
   
   
