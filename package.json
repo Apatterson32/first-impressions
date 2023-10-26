@@ -1,0 +1,15 @@
+{
+  "name": "first-impressions",
+  "version": "1.0.0",
+  "description": "A Node.js command-line application that takes in user input to generate a logo, saving it as an SVG file",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
