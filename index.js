@@ -1,10 +1,13 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// Importing shapes from shape.js
 const {Circle, Triangle, Square} = require('./lib/shapes');
 
-inquirer 
-    .createPromptModule([
+// Using inquirer package to prompt user questions below in the terminal
+function promptUser(){
+    return inquirer.prompt([
+
         {
             type: 'input',
             message: 'Input 3 letters to represent your logo',
@@ -34,4 +37,11 @@ inquirer
             message: 'Input a hexadecimal value or color keyword for the shape of your logo',
             name: 'shapeColor',
         },
-    ])
+    ]);
+}
+
+// writeToFile function
+  
+  
+  
+  
