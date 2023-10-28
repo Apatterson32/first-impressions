@@ -1,5 +1,6 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require("fs");
+
 
 // Importing shapes from shape.js
 const {Circle, Triangle, Square} = require('./lib/shapes');
@@ -11,7 +12,7 @@ function promptUser(){
         {
             type: 'input',
             message: 'Input 3 letters to represent your logo',
-            name: 'logo'
+            name: 'logo',
             validate: function(input) {
             if (input.length <= 3) {
                 return true;
@@ -46,12 +47,34 @@ function promptUser(){
         },
     ]);
 }
-
-// writeToFile function
-
-
-
+// Function to create and save the SVG logo based on user input
+function createLogo(logo, shapes, textColor, shapeColor) {
+    let selectedShape;
   
+    switch (shapes) {
+      case 'Circle':
+        selectedShape = new Circle(shapeColor);
+        break;
+      case 'Square':
+        selectedShape = new Square(shapeColor);
+        break;
+      case 'Triangle':
+        selectedShape = new Triangle(shapeColor);
+        break;
+      default:
+        console.log('Invalid shape choice');
+        return;
+    }
   
+    // Create the SVG content
+    const svgContent = `<svg width="300" height="200">
+      ${selectedShape.render(logo, textColor)}
+    </svg>`;
+  
+    // Save the SVG content to a file named "logo.svg"
+    fs.writeFileSync('logo.svg', svgContent);
+  
+    console.log('Generated logo.svg');
+  }
   
   
