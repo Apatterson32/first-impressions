@@ -43,7 +43,7 @@ This project is licensed under the MIT License License.
 3. From there, answer to following questions
 
 
-4. Your logo will be created as an svg file
+4. Your logo will be created as an svg file located in the examples folder
 
 ## Credits
 

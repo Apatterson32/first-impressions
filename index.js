@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require('path');
 
 
 // Importing shapes from shape.js
@@ -8,7 +9,7 @@ const {Circle, Triangle, Square} = require('./lib/shapes');
 //Function to validate color input
 function isValidColor(input) {
     // Checks input for validity on color keyword or hexadecimal code
-    const colorKeywordPattern = /^(red|green|blue|purple|orange|yellow|pink|black|brown|gray|indigo)$/;
+    const colorKeywordPattern = /^(red|green|blue|purple|orange|yellow|pink|black|brown|gray|indigo|white)$/;
     const hexadecimalColorPattern = /^#[0-9A-Fa-f]{6}$/;
 
     return colorKeywordPattern.test(input) || hexadecimalColorPattern.test(input);
@@ -86,8 +87,11 @@ function createLogo(logo, shapes, textColor, shapeColor) {
       ${selectedShape.render(logo, textColor)}
     </svg>`;
   
+    // Defines output file path
+    const outputFilePath = path.join(__dirname, 'examples', 'logo.svg');
+
     // Save the SVG content to a file named "logo.svg"
-    fs.writeFileSync('logo.svg', svgContent);
+    fs.writeFileSync(outputFilePath, svgContent);
   
     console.log('Generated logo.svg');
   }
