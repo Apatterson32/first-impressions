@@ -1,4 +1,5 @@
 # First Impressions
+
 A Node.js command-line application that takes in user input to generate a logo, saving it as an SVG file
 
 
@@ -9,9 +10,6 @@ A Node.js command-line application that takes in user input to generate a logo, 
 
 This project is licensed under the MIT License License.
 
-## Project Description
-
-A Node.js command-line application that takes in user input to generate a logo, saving it as an SVG file
 
 ## Table of Contents
 - [Installation](#installation)
@@ -32,24 +30,28 @@ A Node.js command-line application that takes in user input to generate a logo, 
 2. Clone code from repository
 
 
-3. Open terminal inside first-impressions and install the required npm packages `npm i jest && inquirer`
+3. Open terminal inside first-impressions and install the required npm packages `npm i jest && inquirer@8`
 
 ## Usage
 
 1. Clone code from repository
 
 
-2. If npm packages are already installed,
+2. If npm packages are already installed, invoke application using `node index.js`
 
 
-3. From there use the 
+3. From there, answer to following questions
 
 
-4. If you do not
+4. Your logo will be created as an svg file
 
 ## Credits
 
 - School work
+
+- Tutor Eric Sayer on correct version of inquirer
+
+- Chatgpt on parts of the tests
 
 
 ### Deployment Video

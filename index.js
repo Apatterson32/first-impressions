@@ -76,5 +76,18 @@ function createLogo(logo, shapes, textColor, shapeColor) {
   
     console.log('Generated logo.svg');
   }
+ 
+// Main function to run the application
+async function run() {
+    try {
+      const userInput = await promptUser();
+      const { logo, shapes, textColor, shapeColor } = userInput;
+      
+      createLogo(logo, shapes, textColor, shapeColor);
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  }
   
+  run();
   
