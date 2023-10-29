@@ -55,7 +55,7 @@ function promptUser(){
 
         {
             type: 'input',
-            message: 'Input a hexadecimal value or color keyword for the shape of your logo',
+            message: 'Input a hexadecimal value or color keyword for the shape color of your logo',
             name: 'shapeColor',
             validate: function (input) {
                 return isValidColor(input) ? true : 'Enter a valid color keyword or hexadecimal value';
