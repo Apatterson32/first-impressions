@@ -69,13 +69,13 @@ function createLogo(logo, shapes, textColor, shapeColor) {
   
     switch (shapes) {
       case 'Circle':
-        selectedShape = new Circle(shapeColor);
+        selectedShape = new Circle(shapeColor, textColor, logo);
         break;
       case 'Square':
-        selectedShape = new Square(shapeColor);
+        selectedShape = new Square(shapeColor, textColor, logo);
         break;
       case 'Triangle':
-        selectedShape = new Triangle(shapeColor);
+        selectedShape = new Triangle(shapeColor, textColor, logo);
         break;
       default:
         console.log('Invalid shape choice');
