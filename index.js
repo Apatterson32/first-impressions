@@ -83,7 +83,7 @@ function createLogo(logo, shapes, textColor, shapeColor) {
     }
   
     // Create the SVG content
-    const svgContent = `<svg width="300" height="200">
+    const svgContent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
       ${selectedShape.render(logo, textColor)}
     </svg>`;
   
