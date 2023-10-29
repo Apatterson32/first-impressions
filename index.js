@@ -82,18 +82,22 @@ function createLogo(logo, shapes, textColor, shapeColor) {
         return;
     }
   
+    // Generate a timestamp for each logo generated
+    const timestamp = new Date().getTime(); // Gets unique timestamp
+    const outputFileName = `logo_${timestamp}.svg`; // Unique filename created
+
     // Create the SVG content
     const svgContent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
       ${selectedShape.render(logo, textColor)}
     </svg>`;
   
     // Defines output file path
-    const outputFilePath = path.join(__dirname, 'examples', 'logo.svg');
+    const outputFilePath = path.join(__dirname, 'examples', outputFileName);
 
     // Save the SVG content to a file named "logo.svg"
     fs.writeFileSync(outputFilePath, svgContent);
   
-    console.log('Generated logo.svg');
+  console.log('Generated your logo!');
   }
  
 // Main function to run the application
